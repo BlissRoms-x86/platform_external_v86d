@@ -11,7 +11,9 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_CFLAGS := \
-	-Wno-unused-parameter
+	-Wno-unused-parameter \
+        -Wno-sign-compare \
+        -Wno-unused-function
 
 LOCAL_CFLAGS_x86 := \
 	-DIF_MASK=X86_EFLAGS_IF \
