@@ -2400,7 +2400,7 @@ idiv_long(u32 s)
     }
     div = dvd / (s32) s;
     mod = dvd % (s32) s;
-    if (abs(div) > 0x7fffffff) {
+    if (labs(div) > 0x7fffffff) {
         x86emu_intr_raise(0);
         return;
     }
@@ -2531,7 +2531,7 @@ div_long(u32 s)
     }
     div = dvd / (u32) s;
     mod = dvd % (u32) s;
-    if (abs(div) > 0xffffffff) {
+    if (div > 0xffffffffu) {
         x86emu_intr_raise(0);
         return;
     }

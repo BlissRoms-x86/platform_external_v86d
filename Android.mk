@@ -12,6 +12,7 @@ include $(CLEAR_VARS)
 
 LOCAL_CFLAGS := \
 	-Wno-unused-parameter \
+	-D__HAS_LONG_LONG__ \
         -Wno-sign-compare \
         -Wno-unused-function
 
